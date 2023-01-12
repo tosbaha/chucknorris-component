@@ -1,0 +1,19 @@
+platform: Common
+buildPlatform:
+displayName: Chuck Norris
+description: "Get Chuck Norris Joke for the given category."
+inputs:
+  - key: "JOKE_CATEGORY"
+    defaultValue: "dev"
+    title: Joke Category
+    description: "Choose one of the categories such as dev, celebrity movie."
+outputs:
+- key: "JOKE_RESULT"
+  title: Chuck Norris Joke
+  defaultValue: "JOKE_RESULT"
+  description: Awesome developer joke.
+  helpText:
+processFilename: bash
+processArguments: '%AC_STEP_TEMP%/main.sh'
+files:
+  - 'main.sh'
